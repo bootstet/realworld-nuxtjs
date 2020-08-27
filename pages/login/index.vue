@@ -51,7 +51,7 @@
 // 仅在客户端加载 js-cookie 包
 const Cookie = process.client ? require('js-cookie') : undefined
 
-import request from '@/utils/request'
+// import request from '@/utils/request'
 import { login, register } from '@/api/user'
 const axios  = require('axios')
 export default {
