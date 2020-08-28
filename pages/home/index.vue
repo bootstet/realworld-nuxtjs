@@ -210,7 +210,6 @@ export default {
     ])
     const { articles, articlesCount } = articleRes.data
     const { tags } =  tagRes.data
-    console.log(articles,'....', articlesCount)
 
     articles.forEach(article => article.favoriteDisables = false)
 

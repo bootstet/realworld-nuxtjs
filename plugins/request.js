@@ -2,7 +2,8 @@ import axios from 'axios'
 
 // 创建请求对象
 export const request =  axios.create({
-  baseURL: 'https://conduit.productionready.io'
+  // baseURL: 'https://conduit.productionready.io'
+  baseURL: 'http://realworld.api.fed.lagounews.com'
 })
 
 // 通过插件机制获取到上下文对象 （query , params, req, res, app, store...）
@@ -21,8 +22,6 @@ export default ({ store }) =>  {
     if(user && user.token) {
       config.headers.Authorization = `Token ${user.token}`
     }
-    console.log(123)
-    console.log(config)
     // 返回 config 请求配置对象
     return config;
   }, function (error) {
